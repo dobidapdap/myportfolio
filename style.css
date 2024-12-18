@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FFFFFF; /* White */
+    color: #000000; /* Black */
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header > .container, .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF; /* White */
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #F8F8F8; /* Slightly Off White */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 24px;
+    color: #000000; /* Accent */
+}
+
+.nav-links {
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000; /* Black */
+    transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+    color: #FFD700; /* Gold Highlight */
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
+}
+
+.nav-links li a:hover {
+    color: #C0C0C0; /* Silver Highlight */
+}
+
+section {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Home Section */
+#home {
+    height: 80vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.details-container,
+.img-container {
+    flex: 1 50%;
+}
+
+.details-container > * {
+    margin-bottom: 10px;
+}
+
+.home-description {
+    text-align: justify;
+    font-size: 12px;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-button {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold */
+    color: #FFFFFF; /* White */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #C0C0C0; /* Silver */
+}
+
+/* About Me Section */
+#about-me {
+    padding-top: 60px;
+}
+
+section h2 {
+    padding: 30px 0;
+    color: #000000; /* Black */
+}
+
+/* Projects Section */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-item {
+    flex: 1 0 30%;
+    height: 400px;
+    text-align: center;
+    border: 2px solid #FFD700; /* Gold */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.img-container img {
+    width: 500px;
+    height: 350px;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.text {
+    padding: 10px;
+    width: 100%;
+    background-color: #FFD700; /* Gold */
+    border-radius: 0 0 8px 8px;
+    color: #000000; /* Black */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.text p {
+    font-size: 10px;
+}
+
+/* Contact Section */
+#contact .form-container {
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form, 
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    border: 2px solid #FFD700; /* Gold */
+    caret-color: #FFD700; 
+    color: #000000; /* Black */
+}
+
+.contact-form button {
+    border: none;
+    outline: none;
+    background-color: #FFD700; /* Gold */
+    color: #FFFFFF; /* White */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #C0C0C0; /* Silver */
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #000000; /* Black */
+}
+
+footer hr {
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background-color: #FFD700; /* Gold */
+}
