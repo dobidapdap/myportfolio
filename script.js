@@ -1,3 +1,9 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+sessionStorage.clear();
+
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-links a');
     const header = document.querySelector('header');
@@ -55,4 +61,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealSections);
     revealSections(); // Trigger on load
+});
+
+let btnSubmit = document.querySelector(".btn-submit");
+
+btnSubmit.addEventListener("click", function() {
+    let name = document.querySelector("input[type='text']");
+    let email = document.querySelector("input[type='email']");
+    let message = document.querySelector("textarea");
+
+    if (name.value.toString().trim() == '') {
+        alert( "Name is required." );
+        return;
+    }
+
+    if (email.value.toString().trim() == '') {
+        alert( "Email is required." );
+        return;
+    }
+
+    if (email.value.toString().endsWith("@gmail.com") || email.value.toString().endsWith("@yahoo.com")) {
+        
+    } else {
+        alert( "Please enter a valid email address." );
+        return;
+    }
+
+    if (message.value.toString().trim() == '') {
+        alert( "Message cannot be empty." );
+        return;
+    }
+
+    alert( "Form submitted successfully!" );
+
+    name.value = "";
+    email.value = "";
+    message.value = "";
 });
