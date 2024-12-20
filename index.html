@@ -3,10 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -38,11 +42,7 @@
                     <div class="details-container">
                         <h1 class="home-title">I'm Doebe Kyle Perez</h1>
                         <p class="home-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores quia pariatur voluptatibus officiis
-                            magnam excepturi consequatur facere, error inventore
-                            eveniet autem cupiditate ex quas eaque veniam,
-                            dolorum beatae sint minus.
+                            I’m an aspiring mobile app developer passionate about creating simple and effective mobile applications.
                         </p>
                         <button class="home-button">Contact Me</button>
                     </div>
@@ -53,11 +53,22 @@
                 <section id="about-me">
                     <h2>About Me</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ullam natus placeat excepturi in vero deleniti ad.
-                        Doloremque inventore commodi odio? Dolorem quia esse
-                        libero consectetur, culpa odio ab ullam sed.
+                        I'm an aspiring mobile app developer with a passion for creating intuitive and functional apps. I focus on Android development, working with languages like Java and Kotlin to bring ideas to life on mobile devices.
                     </p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul class="skills-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Java</li>
+                            <li>Kotlin</li>
+                            <li>Android Studio</li>
+                            <li>UI/UX Design</li>
+                            <li>Problem Solving</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
                 </section>
                 <section id="projects">
                     <h2>Projects</h2>
@@ -67,8 +78,7 @@
                                 <img src="project1.jpg" alt="Project 1">
                             </div>
                             <div class="text">
-                                <h3>Project Name</h3>
-                                <p>Project Description</p>
+                                <h3>Lost & Found App</h3>
                             </div>
                         </div>
                         <div class="project-item">
@@ -76,8 +86,7 @@
                                 <img src="project2.jpg" alt="Project 2">
                             </div>
                             <div class="text">
-                                <h3>Project Name</h3>
-                                <p>Project Description</p>
+                                <h3>Software Project Plan</h3>
                             </div>
                         </div>
                         <div class="project-item">
@@ -85,8 +94,7 @@
                                 <img src="project3.jpg" alt="Project 3">
                             </div>
                             <div class="text">
-                                <h3>Project Name</h3>
-                                <p>Project Description</p>
+                                <h3>Circuit</h3>
                             </div>
                         </div>
                     </div>
@@ -101,7 +109,7 @@
                                 rows="8"
                                 placeholder="Message here..."
                             ></textarea>
-                            <button>Submit</button>
+                            <button type="button" class="btn-submit ">Submit</button>
                         </form>
                     </div>
                 </section>
