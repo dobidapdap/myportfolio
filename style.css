@@ -5,7 +5,8 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -13,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
-    background-color: #FFFFFF; /* White */
+    background-color: #ffffff; /* White */
     color: #000000; /* Black */
 }
 
@@ -27,7 +28,8 @@ main {
 }
 
 /* Header */
-header > .container, .nav-links {
+header > .container,
+.nav-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,14 +41,14 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #FFFFFF; /* White */
+    background-color: #ffffff; /* White */
     z-index: 10;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header.scrolled {
-    background-color: #F8F8F8; /* Slightly Off White */
+    background-color: #f8f8f8; /* Slightly Off White */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,24 +70,24 @@ header p {
 }
 
 .nav-links li a.active {
-    color: #FFD700; /* Gold Highlight */
+    color: #ffd700; /* Gold Highlight */
     font-weight: bold;
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #ffd700;
 }
 
 .nav-links li a:hover {
-    color: #C0C0C0; /* Silver Highlight */
+    color: #c0c0c0; /* Silver Highlight */
 }
 
 section {
-    opacity: 0; 
-    transform: translateY(50px); 
+    opacity: 0;
+    transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 section.active {
-    opacity: 1; 
-    transform: translateY(0); 
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Smooth Scrolling */
@@ -126,20 +128,51 @@ html {
     outline: none;
     border: none;
     padding: 10px 20px;
-    background-color: #FFD700; /* Gold */
-    color: #FFFFFF; /* White */
+    background-color: #ffd700; /* Gold */
+    color: #ffffff; /* White */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .home-button:hover {
-    background-color: #C0C0C0; /* Silver */
+    background-color: #c0c0c0; /* Silver */
 }
 
 /* About Me Section */
 #about-me {
     padding-top: 60px;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills h3 {
+    padding: 30px 0 20px;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #ffd700;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.skills-list li:hover {
+    transform: scale(1.11);
 }
 
 section h2 {
@@ -150,15 +183,16 @@ section h2 {
 /* Projects Section */
 .project-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .project-item {
-    flex: 1 0 30%;
+    flex: 1 0 200px;
     height: 400px;
     text-align: center;
-    border: 2px solid #FFD700; /* Gold */
+    border: 2px solid #ffd700; /* Gold */
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -179,7 +213,7 @@ section h2 {
 .text {
     padding: 10px;
     width: 100%;
-    background-color: #FFD700; /* Gold */
+    background-color: #ffd700; /* Gold */
     border-radius: 0 0 8px 8px;
     color: #000000; /* Black */
     position: absolute;
@@ -201,7 +235,7 @@ section h2 {
     align-items: center;
 }
 
-.contact-form, 
+.contact-form,
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
@@ -213,24 +247,29 @@ section h2 {
 }
 
 .contact-form input,
+.contact-form textarea {
+    caret-color: black;
+}
+
+.contact-form input,
 .contact-form textarea,
 .contact-form button {
-    border: 2px solid #FFD700; /* Gold */
-    caret-color: #FFD700; 
+    border: 2px solid #ffd700; /* Gold */
+    caret-color: #ffd700;
     color: #000000; /* Black */
 }
 
 .contact-form button {
     border: none;
     outline: none;
-    background-color: #FFD700; /* Gold */
-    color: #FFFFFF; /* White */
+    background-color: #ffd700; /* Gold */
+    color: #ffffff; /* White */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #C0C0C0; /* Silver */
+    background-color: #c0c0c0; /* Silver */
 }
 
 .contact-form textarea {
@@ -248,5 +287,35 @@ footer hr {
     margin-bottom: 20px;
     border: 0;
     height: 1px;
-    background-color: #FFD700; /* Gold */
+    background-color: gray; /* Gold */
+}
+
+@media screen and (max-width: 800px) {
+    #home {
+        flex-wrap: wrap;
+        gap: 0px;
+        padding-top: 50px;
+    }
+    .details-container,
+    .img-container {
+        flex: 1 100%;
+    }
+
+    .project-item {
+        width: 50%;
+    }
+
+    #contact .form-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-links li a {
+        font-size: 10px;
+    }
+
+    #contact .form-container {
+        width: 90%;
+    }
 }
